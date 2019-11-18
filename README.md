@@ -1,2 +1,0 @@
-# todoproject
-ewb tech project
