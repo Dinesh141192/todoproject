@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>THING's-To-Do</title>
+    <link rel="stylesheet" href="css/styleSheet.css">
+</head>
+<body>
+    <header>
+        <img src="img/Capture.JPG" alt="things to do">
+    </header>
+    <main>
+        <form action="#" method="get" id="addForm">
+           
+            <label for="things-label">My Things To do</label>
+            <input id="things-label" type="text" name="things-label">
+            <input id="add-things" type="image" src="img/add.JPG" alt="Add a To Do">
+        </form>
+        <form action="#" method="get" id="listForm">
+            <ul id="things-list">
+                
+            </ul>
+        </form>
+    </main>
+    <footer>
+        copyright &copy; Dinesh
+    </footer>
+    <template id="things-item">
+        <li>
+            <input id="things-select" type="checkbox" name="todo-select">
+            <label for="things-select"></label>
+        </li>
+    </template>
+    <script src="js/index.js"></script>
+</body>
+</html>
