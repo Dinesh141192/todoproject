@@ -17,9 +17,14 @@ body {
 #add-things {
     width: 1rem;
 }
+header{
+    background-color: rgb(215, 230, 10);
+}
 main{
     
     height: 80%;
+    background-color: gold;
+    
 }
 html {
     box-sizing: border-box;
@@ -80,6 +85,7 @@ input[type="text"]{
     justify-content: space-evenly;
     align-items: center;
     border-bottom: 0.5em solid greenyellow;
+    background-color: rgb(221, 218, 25);
 }
 #things-list{
     display: grid;
