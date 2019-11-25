@@ -1,9 +1,9 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 workbox.preaching.precacheAndRoute([
-    '/index.html',
+    '/index.htm',
     '/js/index.js',
-    '/img/add.jpg',
-    '/img/capture.jpg'
+    '/img/add.JPG',
+    '/img/Capture.JPG'
 ])
 workbox.routing.registerRoute(
     /\.htm(l?)$/,
