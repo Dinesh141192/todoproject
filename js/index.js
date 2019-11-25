@@ -51,10 +51,11 @@ function addNewToDo(event) {
         input.setAttribute('id', id);
         label.setAttribute('for', id);
         label.textContent = value;
+        list.appendChild(item);
 const database = window.localStorage;
 const thingsString = new XMLSerializer().serializeToString(item);
 database.setItem(id, thingsString);
-        list.appendChild(item);
+       
     }
 
     todo.value = '';
