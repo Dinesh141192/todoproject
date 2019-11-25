@@ -1,10 +1,10 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 workbox.precaching.precacheAndRoute([
-    '/index.htm',
+    '/index.html',
     '/js/index.js',
     '/img/add.JPG',
     '/img/Capture.JPG'
-])
+]);
 workbox.routing.registerRoute(
     /\.htm(l?)$/,
     new workbox.strategies.StaleWhileRevalidate({
@@ -16,11 +16,10 @@ workbox.routing.registerRoute(
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'js-cache',
     })
-
-);
-workbox.routing.registerRoute(
+);workbox.routing.registerRoute(
     /\.css$/,
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: 'css-cache'
+        cacheName: 'css-cache',
     })
 );
+

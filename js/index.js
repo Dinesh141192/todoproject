@@ -26,7 +26,7 @@ function updateCheckBox(checkbox){
     }
     const thingsString = new XMLSerializer().serializeToString(checkbox.parentNode);
     const id = checkbox.id;
-    window.localStorage.setThings(ident, thingsString);
+    window.localStorage.setItem(id, thingsString);
 }
 
 function addNewToDo(event) {
@@ -51,11 +51,12 @@ function addNewToDo(event) {
         input.setAttribute('id', id);
         label.setAttribute('for', id);
         label.textContent = value;
-        list.appendChild(item);
-const database = window.localStorage;
-const thingsString = new XMLSerializer().serializeToString(item);
-database.setItem(id, thingsString);
        
+const database = window.localStorage;
+const thingsString = new XMLSerializer().serializeToString(things);
+database.setItem(id, thingsString);
+list.appendChild(things);
+        
     }
 
     todo.value = '';
