@@ -53,9 +53,9 @@ function addNewToDo(event) {
         label.textContent = value;
        
 const database = window.localStorage;
-const thingsString = new XMLSerializer().serializeToString(things);
+const thingsString = new XMLSerializer().serializeToString(item);
 database.setItem(id, thingsString);
-list.appendChild(things);
+list.appendChild(item);
         
     }
 
