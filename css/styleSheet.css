@@ -114,6 +114,22 @@ header, footer {
 footer {
     border-top: 0.5em solid greenyellow;
 }
+.animate {
+    animation: stretch 2s ease-in-out 2s alternate infinite none ;
+
+}
+
+@keyframes stretch /* Name */ {
+    0% { background-color: rgb(73, 12, 241);
+        opacity: 3; /* property */
+    }
+    100% {background-color: rgb(80, 255, 159);
+        opacity: 1;
+    }
+}
+
+
+
 
 
 

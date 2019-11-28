@@ -16,7 +16,7 @@
            
             <label for="things-label">My Things To do</label>
             <input id="things-label" type="text" name="things-label">
-            <input id="add-things" type="image" src="img/add.JPG" alt="Add a To Do">
+            <input id="add-things" type="image" src="img/add.JPG" alt="Add a To Do" >
         </form>
         <form action="#" method="get" id="listForm">
             <ul id="things-list">
@@ -28,9 +28,11 @@
         copyright &copy; Dinesh
     </footer>
     <template id="things-item">
-        <li>
+        <li class="animate">
             <input id="things-select" type="checkbox" name="todo-select" onclick="updateCheckBox(this)">
             <label for="things-select"></label>
+            <input id="things-delete" type="button" value ="delete" name="todo-delete" onclick="thingsDelete(this)">
+           
         </li>
     </template>
     <script src="js/index.js"></script>
@@ -40,6 +42,8 @@
                 navigator.serviceWorker.register('/sw.js');
             });
         }
+  
+        
     </script>
     
 </body>

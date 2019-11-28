@@ -62,4 +62,12 @@ list.appendChild(item);
     todo.value = '';
 }
 
+function thingsDelete(elem){
+    const key = elem.parentNode.querySelector("input[type=checkbox]").id;
+    const database=window.localStorage;
+    database.removeItem(key);
+    elem.parentNode.remove();
+
+}
+
 run();
