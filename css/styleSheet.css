@@ -108,6 +108,10 @@ header, footer {
     justify-content: center;
     align-items: center;
 }
+li.deleteList{
+    animation: disappear 1s 2s;
+
+}
 
 
 /* Footer */
@@ -116,8 +120,18 @@ footer {
 }
 .animate {
     animation: stretch 2s ease-in-out 2s alternate infinite none ;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+.animate:hover{
+    background: red;
+    width: 150%;
+    transform:rotate(-5deg) ;
+    font-family: cursive;
 
 }
+
+
 
 @keyframes stretch /* Name */ {
     0% { background-color: rgb(73, 12, 241);
@@ -127,7 +141,14 @@ footer {
         opacity: 1;
     }
 }
-
+@keyframes disappear{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
 
 
 

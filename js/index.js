@@ -63,11 +63,30 @@ list.appendChild(item);
 }
 
 function thingsDelete(elem){
-    const key = elem.parentNode.querySelector("input[type=checkbox]").id;
-    const database=window.localStorage;
-    database.removeItem(key);
-    elem.parentNode.remove();
+    elem.parentElement.classList.toggle('deleteList');
+    elem.parentElement.addEventListener('animationend',listnerFunc);
+    
+}
+function listnerFunc(event){
+    const key=this.querySelector("input[type=checkbox]").id;
+    const dataobject = window.localStorage;
+    dataobject.removeItem(key);
+    const parent = this.parentElement;
+    parent.removeChild(this);
 
 }
+/*const myElement = document.querySelector("#things-delete");
+myElement.addEventListener("animationstart", start, false);
+myElement.addEventListener("animationiteration", update, false);
+myElement.addEventListener("animationend", end, false);
 
+function start(e) {
+    document.template.style.backgroundColor = "pink";
+}
+function update(e){
+    document.template.style.backgroundColor = "khaki";
+}
+function end(e){
+    document.template.style.backgroundColor ="black"
+}*/
 run();
