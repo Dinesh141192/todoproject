@@ -10,6 +10,14 @@
     font-size: inherit;
     color: inherit;
 }
+@media screen and (max-width: 450px) {
+ *,
+ *::before,
+ *::after
+    {
+        color: orangered;
+    }
+}
 :root,html
 body {
     height: 100%;
@@ -28,7 +36,25 @@ main{
 }
 html {
     box-sizing: border-box;
-    font-size: calc(1rem + (5) * ((100vw - 300px) / (1080 - 300)));
+    font-size: var(--root-font-size,1rem);
+    background-color: var(--background-color);
+}
+@media screen and (max-width: 450px) {
+    html{
+        font-style: oblique;
+    }
+}
+:root{
+    --root-font-size:  calc(1rem + (5) * ((100vw - 300px) / (1080 - 300)));
+}
+:root{
+    --background-color:red;
+}
+:root{
+    --height:100%;
+}
+:root,html,body{
+    height: var(--height);
 }
 input[type=checkbox] {
     width: 0;
