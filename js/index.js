@@ -1,6 +1,16 @@
 function run() {
     let btn = document.querySelector('#add-things');
     btn.addEventListener('click', addNewToDo);
+
+
+    window.addEventListener('online', (event) => {
+        document.getElementById("onLine").innerHTML = "<p style='color:brown'>Welcome back Online.</p>";
+    });
+    window.addEventListener('offline', (event) => {
+        document.getElementById("onLine").innerHTML = "<p style='color:red'>Sorry for inconveinace. You are offline</p>";
+    });
+
+
     loadThingsToDO();
 }
 
